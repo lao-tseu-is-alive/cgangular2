@@ -1,4 +1,9 @@
-<p>
-  Course title : {{ course_title }} &nbsp; <br>
-  Course professor : {{course_professor}}
-</p>
+<h2>Courses</h2>
+<p>here is a list of Course title with professor name</p>
+<ul>
+
+  <li *ngFor="let course of arr_courses">
+    {{course.course_title }}  <i>given by&nbsp; {{course.course_professor}}</i>
+  </li>
+</ul>
+
