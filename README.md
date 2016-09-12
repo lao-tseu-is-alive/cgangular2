@@ -45,7 +45,15 @@ export class AppComponent {
 }
 ```
 
-
+## generate our first component
+with one command you get scaffold code for your first component  
+```bash
+ ng g component courses
+```
+same thing for your first service
+```bash
+ ng g service courses
+```
 
 
 
