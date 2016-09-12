@@ -1,0 +1,7 @@
+<h2>Authors</h2>
+<p>here is a list of Authors name</p>
+<ul>
+  <li *ngFor="let author of arr_authors">
+    {{author.first_name}}&nbsp; {{author.last_name | uppercase}}
+  </li>
+</ul>

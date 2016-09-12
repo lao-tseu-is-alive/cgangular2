@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
-import { CoursesComponent } from './courses/courses.component';
+import {Component} from '@angular/core';
+import {CoursesComponent} from './courses/courses.component';
+import {AuthorsComponent} from './authors/authors.component';
 
 @Component({
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
-  directives: [CoursesComponent]
+  directives: [CoursesComponent, AuthorsComponent]
 })
 export class AppComponent {
-  title = 'Welcome to my first Angular2 webapp !!!';
+  title = 'Welcome to my first Angular2 webapp !!';
   //the_Course:CoursesComponent= new CoursesComponent('Cours Angular 2','CGil');
-  constructor(){
+  constructor() {
   }
 }
