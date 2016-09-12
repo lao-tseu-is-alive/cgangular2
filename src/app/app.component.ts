@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CoursesComponent} from './courses/courses.component';
 import {AuthorsComponent} from './authors/authors.component';
+//import  {IStudent} from './app.student.interface';
 
 
 @Component({
@@ -12,7 +13,8 @@ import {AuthorsComponent} from './authors/authors.component';
 })
 export class AppComponent {
   title = 'Welcome to my first Angular2 webapp !!';
-  //the_Course:CoursesComponent= new CoursesComponent('Cours Angular 2','CGil');
+  //student:IStudent = {first_name:'#Unknown#', last_name:'#unknown#'};
+  student_name = "";
   constructor() {
   }
 }

@@ -1,5 +1,10 @@
 <h1>
   {{title}}
 </h1>
+<label for="txt_first_name">Enter your name please : </label>
+<input id="txt_first_name" type="text" [value]="student_name" (input)="student_name = $event.target.value">
+<div id="hello_student">
+  <p>Hello {{student_name}}</p>
+</div>
 <app-courses></app-courses>
 <app-authors></app-authors>
