@@ -8,6 +8,7 @@ import { Directive, ElementRef, Renderer } from '@angular/core';
   }
 })
 export class AutoGrow {
+
   onFocus(){
     this.renderer.setElementStyle(this.el.nativeElement, 'width', '350px');
     console.log('Inside onFocus el:' + this.el);
@@ -17,6 +18,9 @@ export class AutoGrow {
     this.renderer.setElementStyle(this.el.nativeElement, 'width', '100px');
     console.log('Inside onBlur el:' + this.el);
   }
-  constructor(private el: ElementRef, private renderer: Renderer) { }
+
+  constructor(private el: ElementRef, private renderer: Renderer) {
+
+  }
 
 }
