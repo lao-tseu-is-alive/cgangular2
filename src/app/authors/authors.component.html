@@ -2,6 +2,13 @@
 <p>here is a list of Authors name</p>
 <ul>
   <li *ngFor="let author of arr_authors">
-    {{author.first_name}}&nbsp; {{author.last_name | uppercase}}
+    <div class="btn-group-lg btn-group-justified" role="toolbar" aria-label="...">
+      <div class="btn-group" role="group" aria-label="...">{{author.first_name}}&nbsp;
+        {{author.last_name | uppercase}}
+      </div>
+      <div class="btn-group" role="group" aria-label="...">
+        <app-stars></app-stars>
+      </div>
+   </div>
   </li>
 </ul>
