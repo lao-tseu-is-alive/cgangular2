@@ -11,8 +11,16 @@ export class AuthorsService {
         last_name: "Gil"
       },
       {
+        first_name: "Christophe",
+        last_name: "Imbach"
+      },
+      {
         first_name: "Christian",
         last_name: "Naegele"
+      },
+      {
+        first_name: "Maurice",
+        last_name: "Pittet"
       }
     ];
   }

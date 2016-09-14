@@ -1,10 +1,19 @@
 <h2>Courses</h2>
-<p>here is a list of Course title with professor name</p>
-<pre>Note : the search filter function is not implemented yet</pre>
-<label for="filter_course">Enter a search filter for courses :</label>  <input id='filter_course' type="text" auto-grow="">
+<p>here is a list of Courses with their title and professor name</p>
+<pre class="label label-warning">Note : the search filter function is not implemented yet</pre>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-4 control-label" for="filter_course">Enter a search filter for courses :</label>
+    <div class="col-sm-8">
+      <input id='filter_course' type="text" auto-grow="">
+    </div>
+  </div>
+</form>
+<button class="btn btn-primary" type="button">
+  Courses <span class="badge">{{arr_courses.length}}</span>
+</button>
 <ul>
-
   <li *ngFor="let course of arr_courses">
-    {{course.course_title }}  <i>given by&nbsp; {{course.course_professor}}</i>
+    {{course.course_title }} <i>given by&nbsp; {{course.course_professor}}</i>
   </li>
 </ul>

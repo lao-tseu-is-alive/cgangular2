@@ -1,27 +1,56 @@
-<h1>
-  {{title}}
-</h1>
-<h2> data binding</h2>
-<p> On next 2 lines there is an example of 2 way data binding syntax</p>
-<a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#sts=Binding%20syntax:%20An%20overview">
-  Refer to Angular doc for explanation</a><br><br>
+<div class="container">
+  <h1>
+    {{title}}
+  </h1>
+  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+  <a href="https://github.com/valor-software/ng2-bootstrap#install-from-cdn">ng2-bootstrap is integrated !</a>
 
-<label for="txt_first_name">Enter your name please : </label>
-<input id="txt_first_name" type="text" [value]="student_name" (input)="student_name = $event.target.value">
-<br><br>
-<label for="txt_student_name">Here is another real time copy of your name that you can also edit: </label>
-<!-- next line is short way of writing  2 way data binding -->
-<input id="txt_student_name" type="text" [(ngModel)]="student_name">
+  <h2>Data binding</h2>
+  <p> The next 2 input text are two examples of 2-way data binding with different syntax</p>
+  <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#sts=Binding%20syntax:%20An%20overview">
+    Refer to Angular doc for explanation</a><br><br>
+  <div class="container-fluid">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Input text with 2-way databinding</legend>
 
-<br><br>next line is short way of doing one way data binding from view to data source<br>
-<label for="txt_student_name_one_way">Here is an input for your name that will not update when other changes: </label>
-<input id="txt_student_name_one_way" type="text" (input)="student_name = $event.target.value">
+        <label for="txt_first_name" class="col-sm-4 control-label">Enter your name please : </label>
+        <div class="col-sm-8">
+          <input id="txt_first_name" class="form-control" type="text" [value]="student_name"
+                 (input)="student_name = $event.target.value">
+        </div>
 
-<div id="hello_student">
-  <p>here we use one way data binding from data-source to view target using \{\{student_name\}\} :
+        <br><br>
 
-  <h3>Hello {{student_name}}</h3>
+        <label for="txt_student_name" class="col-sm-4 control-label">A real time copy of your name (try
+          editing): </label>
+        <!-- next line is short way of writing  2 way data binding -->
+        <div class="col-sm-8">
+          <input id="txt_student_name" class="form-control" type="text" [(ngModel)]="student_name">
+        </div>
+
+      </fieldset>
+      <br/>
+      <p>Next line is short way of doing one way data binding from view to data source</p>
+      <fieldset>
+        <legend>Input text with 1-way databinding</legend>
+        <label for="txt_student_name_one_way" class="col-sm-4 control-label">This input will not update when other
+          changes: </label>
+        <div class="col-sm-8">
+          <input id="txt_student_name_one_way" class="form-control" type="text"
+                 (input)="student_name = $event.target.value">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <hr/>
+  <div id="hello_student">
+    <p>here we use one way data binding from data-source to view target using \{\{student_name\}\} :
+
+    <h3>Hello {{student_name}}</h3>
+  </div>
+  <hr/>
+  <app-courses></app-courses>
+  <hr/>
+  <app-authors></app-authors>
 </div>
-
-<app-courses></app-courses>
-<app-authors></app-authors>
